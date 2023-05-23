@@ -22,9 +22,9 @@ export default function Home() {
                     {
                         listGames.length > 0 && listGames.map(game => (
                             <Link to={`add-game/${game.id}`} key={game.id}>
-                                <ul  className="p-4 border-2 border-black/40 rounded-lg">
-                                    <li>Title: {game.title}</li>
-                                    <li>Content: {game.content}</li>
+                                <ul  className="p-4 text-white bg-black/70 rounded-lg">
+                                    <li><h2 className="text-[24px]">{game.title}</h2></li>
+                                    <li><span className="text-[14px]">{game.content}</span></li>
                                     <li>Year: {game.year}</li>
                                     <li>Manufacturer: {game.manufacturer}</li>
                                 </ul>

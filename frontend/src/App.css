@@ -2,3 +2,7 @@
   width: 100%;
 }
 
+body {
+  background-image: url("../public/Pacman-arcade-neon.jpg");
+  background-size: cover;
+}

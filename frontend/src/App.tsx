@@ -44,9 +44,9 @@ function App() {
 
 	return (
 		<>
-			<header className='flex w-full py-8'>
-				<nav className='absolute flex justify-end top-0 w-full p-8 border-b-black/40 border-b-2'>
-					<h1 className='w-full'>Arcade Games</h1>
+			<header id="header" className='flex w-full py-8'>
+				<nav className='absolute flex justify-end top-0 w-full p-8 border-b-black/40 border-b-2 text-white'>
+					<h1 className='w-full text-white'>Arcade Games</h1>
 					{
 						!isLogin ?
 						<ul className='flex w-full justify-end px-8'>
@@ -55,15 +55,15 @@ function App() {
 						</ul>
 						:
 						<ul className='flex w-full justify-end px-8'>
-							<li className='mr-4 cursor-pointer'><Link to={"/"}>Home</Link></li>
-							<li className='mr-4 cursor-pointer'><Link to={"add-game"}>Add game</Link></li>
-							<li className="cursor-pointer"><Link onClick={handleLogOut} to={"/"}>Log out</Link></li>
+							<li className='mr-4 '><Link to={"/"} className="cursor-pointer">Home</Link></li>
+							<li className='mr-4 '><Link to={"add-game"} className="cursor-pointer">Add game</Link></li>
+							<li><Link onClick={handleLogOut} to={"/"} className="cursor-pointer">Log out</Link></li>
 						</ul>
 						
 					}
 				</nav>
 			</header>
-			<main className='flex w-full justify-center'>
+			<main id="main" className='flex w-full justify-center'>
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="auth" element={<Auth setIsLogin={setIsLogin} />} />

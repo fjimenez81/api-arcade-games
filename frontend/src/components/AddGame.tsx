@@ -84,42 +84,42 @@ export default function AddGame() {
     }
 
     return  <>
-                <form onSubmit={handleSubmit} className="w-[40%] mt-16">
+                <form onSubmit={handleSubmit} className="w-[40%] mt-16 text-white bg-black/70 rounded-lg p-8">
                     <h1>{btn}</h1>
                     <div className="flex flex-col mb-4">
                         <label htmlFor="title">Title</label>
                         <input type="text" name="title" value={data.title}
-                        className="border-2 border-black/40 p-2" onChange={handleTitle}/>
+                               className="text-black p-2" onChange={handleTitle}/>
                     </div>
                     <div className="flex flex-col mb-4">
                         <label htmlFor="content">Content</label>
                         <textarea rows={10} name="content" value={data.content}
-                        className="border-2 border-black/40 p-2" onChange={handleContent}/>
+                        className="text-black p-2" onChange={handleContent}/>
                     </div>
                     <div className="flex flex-col mb-4">
                         <label htmlFor="year">Year</label>
                         <input type="text" name="year" value={data.year}
-                        className="border-2 border-black/40 p-2" onChange={handleYear}/>
+                        className="text-black p-2" onChange={handleYear}/>
                     </div>
                     <div className="flex flex-col mb-4">
                         <label htmlFor="region">Region</label>
                         <input type="text" name="region" value={data.region}
-                        className="border-2 border-black/40 p-2" onChange={handleRegion}/>
+                        className="text-black p-2" onChange={handleRegion}/>
                     </div>
                     <div className="flex flex-col mb-4">
                         <label htmlFor="manufacturer">Manufacturer</label>
                         <input type="text" name="manufacturer" value={data.manufacturer}
-                        className="border-2 border-black/40 p-2" onChange={handleManufacturer}/>
+                        className="text-black p-2" onChange={handleManufacturer}/>
                     </div>
                     <div className="flex w-full justify-center">
                         <input type="submit" value={btn}
-                        className='w-[50%] px-18 py-4 text-black border-2 border-black/40 rounded-full active:bg-black/40 active:text-white' />
+                        className='w-[50%] px-18 py-4 text-white border-2 border-white rounded-full active:bg-black/40 active:text-white' />
                     </div>
                     {
                         id &&
                         <div className="flex w-full justify-center">
                             <button onClick={removeGame}
-                            className='w-[50%] px-18 py-4 bg-white text-black border-2 border-black/40 rounded-full active:bg-black/40 active:text-white mt-4'>Remove game</button>
+                            className='w-[50%] px-18 py-4 text-white border-2 border-white rounded-full active:bg-black/40 active:text-white mt-4'>Remove game</button>
                         </div>
                         
                     }
