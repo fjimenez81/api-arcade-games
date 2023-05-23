@@ -16,6 +16,7 @@
 <h3>Add admin user:</h3><br>
 <ul>
   <li>admin@arcade.com</li>
+  <li>Password lenght 8 characters</li>
 </ul>
 <h3>Api games routes(only authenticated users):</h3><br>
 <ul>
