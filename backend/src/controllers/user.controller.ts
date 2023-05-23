@@ -60,7 +60,7 @@ export const signUp = async (request: IUserRequest, reply: FastifyReply) => {
             expires: new Date(Date.now() + 1 * 24 * 60 * 1000)})
 		reply
 			.code(STANDARD.SUCCESS)
-			.send({ message: "User created!" })
+			.send({ message: "User created!", token })
 		
 	} catch (err) {
 		handleServerError(reply, err)
