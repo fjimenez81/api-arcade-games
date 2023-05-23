@@ -4,6 +4,14 @@
 <ul>
   <li>docker-compose up -d</li>
 </ul>
+<h3>Frontend url:</h3><br>
+<ul>
+  <li>http://localhost:5173</li>
+</ul>
+<h3>Backend url:</h3><br>
+<ul>
+  <li>http://localhost:5000</li>
+</ul>
 <h3>Api users routes:</h3><br>
 <ul>
   <li>Register user: &nbsp; http://localhost:5000/api/user/signup</li>
