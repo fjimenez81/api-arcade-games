@@ -30,4 +30,9 @@
 <ul>
   <li>Set header authentication: Bearer + token</li>
 </ul>
-<h3>TO DO: improving...</h3><br>
+<h3>TO DO:</h3><br>
+<ul>
+  <li>Improve frontend</li>
+  <li>Security routes</li>
+  <li>Improving...</li>
+</ul>
