@@ -2,6 +2,7 @@ import fastify, { FastifyError, FastifyReply, FastifyRequest } from 'fastify'
 import pino from 'pino';
 import gameRouter from 'routes/game.router';
 import userRouter from 'routes/user.router';
+//import gameRouter from 'routes/index';
 import type { FastifyCookieOptions } from '@fastify/cookie'
 import cookie from '@fastify/cookie'
 import fastifyCors from '@fastify/cors';
@@ -31,7 +32,7 @@ const startServer = () => {
 		server.get('/', (request: FastifyRequest, reply: FastifyReply): void => {
 			reply.send({ message: 'Hello, welcome to arcade games!' })
 		})
-		server.listen({ port: 5000 }, (err, address) => {
+		server.listen({ port: 5000, host: '0.0.0.0' }, (err, address) => {
 			if (err) {
 				console.error(err)
 				process.exit(1)

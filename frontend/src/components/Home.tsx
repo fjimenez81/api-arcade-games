@@ -20,7 +20,7 @@ export default function Home() {
     return  <div className="w-full flex justify-center">
                 <div className="grid grid-cols-3 gap-3 w-[80%]">
                     {
-                        listGames.map(game => (
+                        listGames.length > 0 && listGames.map(game => (
                             <Link to={`add-game/${game.id}`} key={game.id}>
                                 <ul  className="p-4 border-2 border-black/40 rounded-lg">
                                     <li>Title: {game.title}</li>

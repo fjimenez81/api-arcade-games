@@ -53,7 +53,11 @@ export const signUp = async (request: IUserRequest, reply: FastifyReply) => {
 			},
 		})
 		const token = JWT.sign({ id: createUser.id }, process.env.APP_JWT_SECRET, { expiresIn: '8h' })
-		
+		reply.setCookie("x-access-token", token, {
+            httpOnly: true,
+            secure: false,
+			path: "/",
+            expires: new Date(Date.now() + 1 * 24 * 60 * 1000)})
 		reply
 			.code(STANDARD.SUCCESS)
 			.send({ message: "User created!" })

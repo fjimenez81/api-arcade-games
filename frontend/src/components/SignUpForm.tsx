@@ -28,7 +28,11 @@ export default function SignUpForm(props: any) {
 			headers: {
 				'Content-Type': 'application/json;charset=utf-8'
 			},
-		}).then(res => res.json()).then(msg => console.log(msg))
+		}).then(res => res.json()).then(msg => {
+			if (msg.message !== "UNAUTHORIZED") {
+				setIsLogin(true)
+			}
+		})
 
 	}
 
@@ -36,9 +40,9 @@ export default function SignUpForm(props: any) {
 		setFirstView(false)
 	}
 
-    return <div className='w-full'>
+    return <div className=''>
 				<div className="w-full flex justify-center">
-					<h4 className="text-black text-[40px]">Sign in</h4>
+					<h4 className="text-black text-[40px]">Sign up</h4>
 				</div>
 				<form className='flex flex-col w-full text-black border-2 border-black/40 p-16' onSubmit={handleSubmit}>
 					<label htmlFor="email" className='mb-2'>
